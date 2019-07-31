@@ -1,0 +1,15 @@
+﻿var Sounds = {
+    ambient: 'sounds/ambient.mp3',
+    amoeba: 'sounds/amoeba.mp3',
+    blast: 'sounds/blast.mp3',
+    boom: 'sounds/boom.mp3',
+    diamond: 'sounds/diamond.mp3',
+    diamondFall: 'sounds/diamondFall.mp3',
+    entering: 'sounds/entering.mp3',
+    noise: 'sounds/noise.mp3',
+    points: 'sounds/points.mp3',
+    rock: 'sounds/rock.mp3',
+    step: 'sounds/step.mp3',
+    timeout: 'sounds/timeout.mp3',
+    wipe: 'sounds/wipe.mp3',
+}

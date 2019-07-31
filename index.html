@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Michał Grabowski"/>
+    <title>Boulder Dash</title>
+    <link rel="stylesheet" type="text/css" href="style/defaultReset.css">
+    <link href="style/style.css" rel="stylesheet" />
+    <script src="scripts/createEnvironment.js"></script>
+    <script src="scripts/Delta.js"></script>
+    <script src="scripts/endGame.js"></script>
+    <script src="scripts/Interface.js"></script>
+    <script src="scripts/levelSettings.js"></script>
+    <script src="scripts/Menu.js"></script>
+    <script src="scripts/screenOperator.js"></script>
+    <script src="scripts/Sounds.js"></script>
+    <script src="scripts/Object.js"></script>
+    <script src="scripts/Objects/Amoeba.js"></script>
+    <script src="scripts/Objects/Boom.js"></script>
+    <script src="scripts/Objects/comingOut.js"></script>
+    <script src="scripts/Objects/Demon.js"></script>
+    <script src="scripts/Objects/Diamond.js"></script>
+    <script src="scripts/Objects/Dirt.js"></script>
+    <script src="scripts/Objects/Door.js"></script>
+    <script src="scripts/Objects/Enemy.js"></script>
+    <script src="scripts/Objects/Player.js"></script>
+    <script src="scripts/Objects/Rock.js"></script>
+    <script src="scripts/Objects/steelWall.js"></script>
+    <script src="scripts/Objects/stoneWall.js"></script>
+    <script src="scripts/Objects/turningWall.js"></script>
+    <script src="scripts/levelInfo/A1.js"></script>
+    <script>
+        var ambient = new Audio(Sounds.ambient);
+        var contextCreated = false;
+
+        window.onload = function () {
+            createEnvironment("#2A0000");
+            changeColor("#000000");
+
+            menu = new Menu();
+            interf = new Interface();
+
+            ambient.play();
+
+            var Int = setInterval(function() {
+                if (ambient.duration > 0 && !ambient.paused) {
+                } else {
+                    if (levelSettings.gameStarted != true) {
+                        ambient.play();
+                    }
+                }
+            }, 50)
+        }
+    </script>
+</head>
+<body>
+    <div class="site">
+        <canvas width="756" height="525" id="canvas"></canvas>
+    </div>
+</body>
+</html>
